@@ -10,7 +10,7 @@ function App() {
     setExpr(prev => prev + symbol)
     if(expr[expr.length - 1] == "=") {
       if(/[0-9.]/.test(symbol)) {
-        setExpr(answer + symbol);
+        setExpr(symbol);
       } else {
         setExpr(answer + symbol);
       }
@@ -35,7 +35,7 @@ function App() {
           <div className="total">{answer}</div>
         </div>
          <div onClick={clear} className="clean" id="clear">AC</div>
-         <div onClick={() => action("x")} className="operator" id="multiply">x</div>
+         <div onClick={() => action("*")} className="operator" id="multiply">x</div>
          <div onClick={() => action("/")} className="operator" id="divide">/</div>
          <div onClick={() => action("7")} className="nomber" id="seven">7</div>
          <div onClick={() => action("8")} className="nomber" id="eight">8</div>
