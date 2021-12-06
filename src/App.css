@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.container{
+  display: grid;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 90px);
 }
 
-.App-link {
-  color: #61dafb;
+.container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: rgb(163, 92, 230);
+  font-size: 2rem;
+  border: 1px solid rgb(255, 255, 255);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nomber {
+  background-color: rgba(250, 249, 243, 0.3);
 }
+
+.operator {
+  background-color: rgba(243, 208, 232, 0.3);
+}
+
+.clean {
+  background-color: rgba(255, 46, 64, 0.2);
+}
+
+.equal {
+  background-color: rgba(159, 202, 236, 0.4);
+}
+
+.nomber:hover {
+  background-color: rgba(250, 249, 243, 0.9);
+}
+
+.operator:hover {
+  background-color: rgba(255, 240, 244, 0.9);
+}
+
+.clean:hover {
+  background-color: rgba(255, 46, 64, 0.4);
+}
+
+.equal:hover {
+  background-color: rgba(159, 202, 236, 0.8);
+}
+
+#clear, #zero {
+  grid-column: span 2;
+}
+
+#equals {
+  grid-row: span 2;
+}
+
+#display {
+  grid-column: 1/-1;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: rgba(252, 252, 252, 0.7);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+#display input {
+  width: 100%;
+  padding: 5px 20px;
+  text-align: right;
+  background-color: none;
+  border: none;
+  color: rgb(185, 89, 177);
+}
+
+.total {
+  padding: 5px 20px;
+}
+
+
+
+
